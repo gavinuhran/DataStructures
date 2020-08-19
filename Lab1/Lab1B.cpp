@@ -25,7 +25,7 @@ struct ValuePackage{
     COUT << "Long Unsigned Int\t: " << this->theInt << " at address " << &(this->theInt) << ENDL;
     COUT << "Float\t\t\t: " << this->theFlt << " at address " << &(this->theFlt) << ENDL;
 		COUT << "Double\t\t\t: " << this->theDbl << " at address " << &(this->theDbl) << ENDL;
-		COUT << "Char\t\t\t: " << this->theChar << " at address " << &(this->theChar) << ENDL;
+		COUT << "Char\t\t\t: " << this->theChar << " at address " << (void *)&(this->theChar) << ENDL;
 	}
 };
 
