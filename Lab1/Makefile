@@ -15,7 +15,7 @@ PQCXX    := -m64 -std=c++11 -Weffc++ $(PQCFLAGS)
 Lab1AObjs :=  Lab1A.o
 
 Lab1A: Lab1A.o
-		$(PP) $(CXXFLAGS)-o Lab1A $(Lab1AObjs)
+		$(PP) $(CXXFLAGS) -o Lab1A $(Lab1AObjs)
 		./Lab1A
 
 Lab1A.o: Lab1A.cpp
@@ -26,7 +26,7 @@ Lab1A.o: Lab1A.cpp
 Lab1BObjs := Lab1B.o
 
 Lab1B: Lab1B.o
-		$(PP) $(CXXFLAGS)-o Lab1B $(Lab1BObjs)
+		$(PP) $(CXXFLAGS) -o Lab1B $(Lab1BObjs)
 		./Lab1B
 
 Lab1B.o: Lab1B.cpp
@@ -37,8 +37,12 @@ Lab1B.o: Lab1B.cpp
 Lab1CObjs := Lab1C.o
 
 Lab1C: Lab1C.o
-		$(PP) $(CXXFLAGS)-o Lab1C $(Lab1CObjs)
+		$(PP) $(CXXFLAGS) -o Lab1C $(Lab1CObjs)
 		./Lab1C
 
 Lab1C.o: Lab1C.cpp
 		$(PP) $(CXXFLAGS) -c Lab1C.cpp
+
+# CLEAN
+clean :
+		rm -rf *.o Lab1A Lab1B Lab1C

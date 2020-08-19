@@ -19,5 +19,5 @@ int main(void) {
   COUT << "Long Unsigned Int\t: " << theInt << " at address " << &theInt << ENDL;
   COUT << "Float\t\t\t: " << theFlt << " at address " << &theFlt << ENDL;
   COUT << "Double\t\t\t: " << theDbl << " at address " << &theDbl << ENDL;
-  COUT << "Char\t\t\t: " << theChar << " at address " << &theChar << ENDL;
+  COUT << "Char\t\t\t: " << theChar << " at address " << (void *)&theChar << ENDL;
 }
