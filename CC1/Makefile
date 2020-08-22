@@ -17,6 +17,7 @@ fundamental: fundamental.o
 fundamental.o: fundamental.cpp
 		$(PP) $(CXXFLAGS) -c fundamental.cpp
 
+<<<<<<< HEAD
 # COIN FLIP PREDICTOR
 CoinFlipPredictorObjs :=  coinFlipPredictor.o
 
@@ -30,3 +31,8 @@ coinFlipPredictor.o: coinFlipPredictor.cpp
 # CLEAN
 clean :
 		rm -rf *.o fundamental coinFlipPredictor
+=======
+# CLEAN
+clean :
+		rm -rf *.o fundamental
+>>>>>>> 8fec55a397d5b19bf816fb2348950f8db367354c
