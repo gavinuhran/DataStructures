@@ -10,18 +10,18 @@ PQCXX    := -m64 -std=c++11 -Weffc++ $(PQCFLAGS)
 # FUNDAMENTAL
 FundamentalObjs :=  fundamental.o
 
-fundamental: fundamental.o
+Fundamental: fundamental.o
 		$(PP) $(CXXFLAGS) -o fundamental $(FundamentalObjs)
 		./fundamental
 
 fundamental.o: fundamental.cpp
 		$(PP) $(CXXFLAGS) -c fundamental.cpp
 
-<<<<<<< HEAD
+
 # COIN FLIP PREDICTOR
 CoinFlipPredictorObjs :=  coinFlipPredictor.o
 
-coinFlipPredictor: coinFlipPredictor.o
+Creative: coinFlipPredictor.o
 		$(PP) $(CXXFLAGS) -o coinFlipPredictor $(CoinFlipPredictorObjs)
 		./coinFlipPredictor
 
@@ -31,8 +31,3 @@ coinFlipPredictor.o: coinFlipPredictor.cpp
 # CLEAN
 clean :
 		rm -rf *.o fundamental coinFlipPredictor
-=======
-# CLEAN
-clean :
-		rm -rf *.o fundamental
->>>>>>> 8fec55a397d5b19bf816fb2348950f8db367354c
