@@ -10,12 +10,17 @@ bool callForUserValue(int** pascalTriangle, int numLevels) {
     COUT << "Enter a row and column value to print [two numbers only]:  ";
     CIN >> row >> col;
 
-    if (row > numLevels || col > numLevels) {
-        CERR << "The entered row or column is outside the range of the Pascal Triangle." << ENDL << ENDL;
-        return true;
+    if (row <= 0 || row > numLevels) {
+        CERR << "The entered row is outside the range of the Pascal Triangle." << ENDL << ENDL;
     }
     else {
-        COUT << getValue(pascalTriangle, row, col) << ENDL << ENDL;
+        if (col <= 0 || col > row) {
+          CERR << "The entered column is outside the range of row " << row << "." << ENDL << ENDL;
+
+        }
+        else {
+            COUT << getValue(pascalTriangle, row, col) << ENDL << ENDL;
+        }
     }
 
     char c;
