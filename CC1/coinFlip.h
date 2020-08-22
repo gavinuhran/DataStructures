@@ -4,4 +4,4 @@ int getValue(int** coinFlipModel, int row, int col);
 
 int getSumCombos(int** coinFlipModel, int numFlips);
 
-int getPercentage(int** coinFlipModel, int numFlips, int numHeads);
+double getPercentage(int** coinFlipModel, int numFlips, int numHeads);

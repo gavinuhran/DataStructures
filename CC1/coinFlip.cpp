@@ -47,7 +47,7 @@ int getSumCombos(int** coinFlipModel, int numFlips) {
     return total;
 }
 
-int getPercentage(int** coinFlipModel, int numFlips, int numHeads) {
+double getPercentage(int** coinFlipModel, int numFlips, int numHeads) {
     int numCombos = getSumCombos(coinFlipModel, numFlips);
     int comboFrequency = getValue(coinFlipModel, numFlips, numHeads);
 
