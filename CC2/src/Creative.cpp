@@ -1,5 +1,6 @@
 #include "../include/Alphabetize.h"
 #include <cstdlib>
+#include <time.h> // Used for enhanced random number generation
 
 int main() {
     std::vector<std::string> NAMES{"Smith", "Johnson", "Williams", "Jones", "Brown", "Davis", "Miller", "King",
@@ -10,19 +11,27 @@ int main() {
     int numStudents;
     COUT << "--------------------" << ENDL;
     COUT << "Enter the number of students in the simulated class (1-30 students):  ";
-    std::cin >> numStudents;
-    COUT << ENDL;
+
+    if (std::cin >> numStudents) {
+        COUT << ENDL;
+    }
+    else {
+        std::cerr << "Invalid Entry." << ENDL;
+        return -1;
+    }
 
     // Check for invalid entry, assuming entry is an integer
     if (numStudents < 1 || numStudents > 30) {
         std::cerr << "You entered an invalid class size of " << numStudents << " students." << ENDL;
-        return -1;
+        return -2;
     }
 
     std::vector<std::string> students{};
 
+  
+    std::srand((unsigned int)time(0)); // Re-intializes std::rand() using current time
     for (int i = 0; i < numStudents; ++i) {
-        students.push_back(NAMES.at(rand() % 30));
+        students.push_back(NAMES.at(std::rand() % 30));
     }
 
     std::vector<std::string> sortedStudents = students;
