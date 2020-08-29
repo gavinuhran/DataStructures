@@ -11,6 +11,7 @@ int main() {
     int numStudents;
     COUT << "--------------------" << ENDL;
     COUT << "Enter the number of students in the simulated class (1-30 students):  ";
+
     if (std::cin >> numStudents) {
         COUT << ENDL;
     }
@@ -27,6 +28,7 @@ int main() {
 
     std::vector<std::string> students{};
 
+  
     std::srand((unsigned int)time(0)); // Re-intializes std::rand() using current time
     for (int i = 0; i < numStudents; ++i) {
         students.push_back(NAMES.at(std::rand() % 30));
