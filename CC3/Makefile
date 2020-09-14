@@ -21,9 +21,22 @@ Fundamental: $(FundamentalObjs)
 $(OBJ)/Fundamental.o: $(SRC)/Fundamental.cpp
 	$(PP) $(CXXFLAGS) -c $(SRC)/Fundamental.cpp -o $@
 
+
+# Command: make Fundamental
+CreativeObjs := $(OBJ)/Creative.o
+
+Creative: $(CreativeObjs)
+	$(PP) $(CXXFLAGS) -o $(EXE)/Creative $(CreativeObjs)
+	$(EXE)/./Creative
+
+$(OBJ)/Creative.o: $(SRC)/Creative.cpp
+	$(PP) $(CXXFLAGS) -c $(SRC)/Creative.cpp -o $@
+
+
 # Will be called by grader to initialize your objects and executables folders
 initialize:
 	mkdir $(OBJ) $(EXE)
+
 
 # Make clean
 clean :

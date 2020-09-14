@@ -19,7 +19,7 @@ class DoubleHash : public HashTable<Key, Value> {
 
 
         // Hash function 2 for Double Hashing Method
-        long unsigned int HashFunc2(const std::string& keyToTranslate) {
+        long unsigned int HashFunc2(const std::string& keyToTranslate) const {
             return (long unsigned int)(3 - (keyToTranslate.size() % 3));
         }
 
