@@ -12,24 +12,24 @@ int main() {
 
     PriorityQueue<std::string> theList;
 
-    theList.push("Cheering", 5);
+    theList.push("Of", 5);
     COUT << theList << ENDL;
 
     theList.push("The", 3);
     COUT << theList << ENDL;
 
-    theList.push("Name", 7);
+    theList.push("Dame", 7);
     COUT << theList << ENDL;
 
-    theList.push("Wake", 1);
+    theList.push("Here", 1);
     COUT << theList << ENDL;
 
-    theList.push("Echoes", 4);
+    theList.push("Irish", 4);
     COUT << theList << ENDL;
 
-    theList.push("Her", 6);
+    theList.push("Notre", 6);
     COUT << theList << ENDL;
     
-    theList.push("Up", 2);
+    theList.push("Come", 2);
     COUT << theList << ENDL;
 }
