@@ -14,6 +14,9 @@
 #include <iostream>
 #include <unordered_map>
 
+#define COUT std::cout
+#define ENDL std::endl
+
 template<class T>
 class DLList{
 	
@@ -350,9 +353,7 @@ class DLList{
 		}
 		
 		T front() const{
-			
 			return head->data;
-			
 		}
 		
 		

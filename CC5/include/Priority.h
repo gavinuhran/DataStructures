@@ -18,6 +18,10 @@ class Priority {
 
         ~Priority() {}
 
+        T getData() {
+            return data;
+        }
+
         Priority<T>& operator=(const Priority<T> rhs) {
 			return *this;
         }

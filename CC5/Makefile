@@ -33,6 +33,17 @@ $(OBJ)/PQTest.o: $(SRC)/PQTest.cpp
 	$(PP) $(CXXFLAGS) -c $(SRC)/PQTest.cpp -o $@
 
 
+# Command: make Creative
+VaccineDistributionObjs := $(OBJ)/VaccineDistribution.o
+
+Creative: $(VaccineDistributionObjs)
+	$(PP) $(CXXFLAGS) -o $(EXE)/VaccineDistribution $(VaccineDistributionObjs)
+	$(EXE)/./VaccineDistribution
+
+$(OBJ)/VaccineDistribution.o: $(SRC)/VaccineDistribution.cpp
+	$(PP) $(CXXFLAGS) -c $(SRC)/VaccineDistribution.cpp -o $@
+
+
 # Will be called by grader to initialize your objects and executables folders
 initialize:
 	mkdir $(OBJ) $(EXE)

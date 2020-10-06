@@ -4,6 +4,8 @@
 #include "SorDLList.h"
 #include "Priority.h"
 
+#include <string>
+
 template<class T>
 class PriorityQueue {
 
@@ -20,6 +22,10 @@ class PriorityQueue {
 
 		// Constructor with limited queue size
 		PriorityQueue(unsigned int max) : list(), max_len(max), queueSize(0) {}
+
+		PriorityQueue<T>& operator=(const PriorityQueue<T> rhs) {
+			return *this;
+        }
 		
 		void push(T elem, unsigned int priority) {
 			if(queueSize < max_len) {
@@ -37,11 +43,11 @@ class PriorityQueue {
 		}
 
 		T front() const{
-			return list.front()->data;
+			return list.front().getData();
 		}
 
 		T back() const{
-			return list.back()->data;
+			return list.back().getData();
 		}
 		
 		unsigned int max_size() const{
@@ -58,7 +64,7 @@ class PriorityQueue {
 
         friend std::ostream& operator<<(std::ostream& output, const PriorityQueue<T>& theList) {
             if (theList.empty()) {
-                output << "The list is empty" << std::endl;;
+                output << "The list is empty" << std::endl;
             }
             else {
                 output << theList.list;
